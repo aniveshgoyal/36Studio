@@ -34,10 +34,10 @@ export default function RedDot() {
         mass: 0.5,
       }}
     >
-      <div className="w-3 h-3 rounded-full bg-red-500" />
+      <div className="w-6 h-6 rounded-full bg-red-500" />
       {showPrompt && isAudioLoaded && (
         <motion.span
-          className="absolute left-6 top-1/2 -translate-y-1/2 text-red-500 text-sm uppercase tracking-wide whitespace-nowrap"
+          className="absolute left-8 top-1 -translate-y-1/2 text-red-500 text-xs uppercase tracking-wide whitespace-nowrap"
           initial={{ opacity: 0, x: -10 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -10 }}

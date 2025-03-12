@@ -18,7 +18,7 @@ const AudioPlayer: React.FC = () => {
       {[...Array(3)].map((_, i) => (
         <motion.span
           key={i}
-          className={`w-[2px] h-4 bg-current ${isPlaying && isAudioLoaded ? "animate-pulse" : ""}`}
+          className={`w-[1px] h-[2px] bg-current ${isPlaying && isAudioLoaded ? "animate-pulse" : ""}`}
           animate={
             isPlaying && isAudioLoaded
               ? {
@@ -31,7 +31,7 @@ const AudioPlayer: React.FC = () => {
                     ease: "easeInOut",
                   },
                 }
-              : { height: 16 }
+              : { height: 6 }
           }
         />
       ))}

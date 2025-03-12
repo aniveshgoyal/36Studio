@@ -85,7 +85,7 @@ function ServiceAccordion({ category, index }: { category: { title: string; serv
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
+      transition={{ duration: 0.3, delay: index * 0.1 }}
       className="border-b border-border"
     >
       <button onClick={toggleAccordion} className="w-full py-4 flex items-center justify-between text-left">
@@ -136,7 +136,7 @@ function ServiceItem({ service }: { service: string }) {
         transition={{ duration: 0.3, ease: "easeInOut" }}
         style={{ originY: 1 }}
       />
-      <div className={`relative block transition-colors duration-200 ${isHovered ? "text-white dark:text-black" : ""}`}>
+      <div className={`relative block transition-colors duration-10 ${isHovered ? "text-white dark:text-black" : ""}`}>
         {service}
       </div>
     </div>

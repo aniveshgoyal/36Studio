@@ -24,12 +24,12 @@ export default function Header() {
   return (
     <AnimatePresence>
       <motion.header
-        className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-sm"
+        className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm"
         initial={{ y: 0 }}
         animate={{ y: scrollDirection === "down" ? "-100%" : 0 }}
         transition={{ duration: 0.3 }}
       >
-        <div className="container px-6">
+        <div className="px-6">
           <div className="flex items-center justify-between h-20">
             <Link href="/" className="text-base">
               Thirtysixstudio
