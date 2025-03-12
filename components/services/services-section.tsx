@@ -11,7 +11,7 @@ export default function Services() {
     <section className="py-20 md:py-32">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
-          {/* Left column - Heading */}
+        
           <motion.div
             className="md:col-span-1"
             initial={{ opacity: 0, y: 20 }}
@@ -20,8 +20,6 @@ export default function Services() {
           >
             <h3 className="text-xs font-medium">OUR SERVICES</h3>
           </motion.div>
-
-          {/* Right column - Content */}
           <div className="md:col-span-3 space-y-12">
             <motion.p
               className="text-xl md:text-2xl"
@@ -74,7 +72,7 @@ export default function Services() {
   )
 }
 
-function ServiceAccordion({ category, index }) {
+function ServiceAccordion({ category, index }: { category: { title: string; services: string[] }; index: number }) {
   const [isOpen, setIsOpen] = useState(false)
   const playClickSound = useClickSound()
 
@@ -107,7 +105,7 @@ function ServiceAccordion({ category, index }) {
             className="overflow-hidden"
           >
             <div className="pb-4 space-y-1">
-              {category.services.map((service, idx) => (
+              {category.services.map((service: string, idx: number) => (
                 <ServiceItem key={idx} service={service} />
               ))}
             </div>
@@ -118,7 +116,7 @@ function ServiceAccordion({ category, index }) {
   )
 }
 
-function ServiceItem({ service }) {
+function ServiceItem({ service }: { service: string }) {
   const playClickSound = useClickSound()
   const [isHovered, setIsHovered] = useState(false)
 

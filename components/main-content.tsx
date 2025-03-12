@@ -10,7 +10,6 @@ export default function MainContent() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, delay: 0.3 }}
     >
-      {/* This would be your main content when in landscape mode */}
       <motion.h2
         className="text-3xl md:text-4xl font-light mb-6 text-center"
         initial={{ y: 20 }}

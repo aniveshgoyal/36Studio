@@ -8,7 +8,6 @@ export default function TalentSection() {
     <section id="talk-to-us" className="py-20 md:py-32">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
-          {/* Left column - Heading */}
           <motion.div
             className="md:col-span-1"
             initial={{ opacity: 0, y: 20 }}
@@ -17,8 +16,6 @@ export default function TalentSection() {
           >
             <h3 className="text-xs font-medium">04 — TALK TO US</h3>
           </motion.div>
-
-          {/* Right column - Content */}
           <div className="md:col-span-3 space-y-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

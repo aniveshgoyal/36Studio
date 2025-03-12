@@ -13,7 +13,7 @@ export default function ServicesLayout() {
   }, [])
 
   if (!mounted) {
-    return null // or a loading placeholder
+    return null 
   }
 
   return (

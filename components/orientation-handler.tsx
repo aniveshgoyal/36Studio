@@ -10,10 +10,8 @@ export default function OrientationHandler() {
   const isMobile = useMediaQuery("(max-width: 768px)")
 
   useEffect(() => {
-    // Check initial orientation
     checkOrientation()
 
-    // Add event listener for orientation changes
     window.addEventListener("resize", checkOrientation)
 
     // Clean up
@@ -71,7 +69,6 @@ export default function OrientationHandler() {
             animate={{ y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            {/* Main content would go here when in landscape mode */}
             <h1 className="text-3xl font-light">Welcome to Thirtysixstudio</h1>
           </motion.div>
         </motion.div>

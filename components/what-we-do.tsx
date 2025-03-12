@@ -7,7 +7,6 @@ export default function WhatWeDo() {
     <section id="what-we-do" className="py-20 md:py-32">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
-          {/* Left column - Heading */}
           <motion.div
             className="md:col-span-1"
             initial={{ opacity: 0, y: 20 }}
@@ -17,8 +16,6 @@ export default function WhatWeDo() {
           >
             <h3 className="text-xs font-medium">01 — WHAT WE DO</h3>
           </motion.div>
-
-          {/* Right column - Content */}
           <div className="md:col-span-3 space-y-8">
             <motion.h2
               className="text-xl md:text-2xl font-medium leading-tight mb-8"

@@ -14,17 +14,16 @@ export function useClickSound() {
     }
 
     const oscillator = audioContextRef.current.createOscillator()
-    oscillator.type = "sine"
-    oscillator.frequency.setValueAtTime(2000, audioContextRef.current.currentTime)
+    oscillator.type = "square" 
+    oscillator.frequency.setValueAtTime(4000, audioContextRef.current.currentTime) 
     oscillator.connect(gainNodeRef.current!)
 
-    gainNodeRef.current!.gain.setValueAtTime(0.1, audioContextRef.current.currentTime)
-    gainNodeRef.current!.gain.exponentialRampToValueAtTime(0.001, audioContextRef.current.currentTime + 0.1)
+    gainNodeRef.current!.gain.setValueAtTime(0.2, audioContextRef.current.currentTime)
+    gainNodeRef.current!.gain.exponentialRampToValueAtTime(0.001, audioContextRef.current.currentTime + 0.05) 
 
     oscillator.start()
-    oscillator.stop(audioContextRef.current.currentTime + 0.1)
+    oscillator.stop(audioContextRef.current.currentTime + 0.05) 
   }, [])
 
   return playClickSound
 }
-
