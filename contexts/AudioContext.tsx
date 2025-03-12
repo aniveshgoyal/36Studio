@@ -19,12 +19,10 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const audioRef = useRef<HTMLAudioElement | null>(null)
 
   useEffect(() => {
-    // Create audio element but don't autoplay
     const newAudio = new Audio()
     newAudio.loop = true
     newAudio.preload = "auto"
 
-    // Set up event listeners
     newAudio.addEventListener("canplaythrough", () => {
       setIsAudioLoaded(true)
     })
@@ -32,9 +30,7 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     newAudio.addEventListener("error", (e) => {
       console.error("Audio loading error:", e)
     })
-
-    // Set the source after adding event listeners
-    newAudio.src = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/world1-YFFVfMpbmXC2m7IjxJX0ofVba7Zkdb.mp3"
+    newAudio.src = "/audio/world2.mp3"
 
     audioRef.current = newAudio
 
@@ -52,7 +48,6 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     if (isPlaying) {
       audioRef.current.pause()
     } else {
-      // Create a user interaction context for audio playback
       const playPromise = audioRef.current.play()
 
       if (playPromise !== undefined) {
@@ -81,8 +76,6 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         setShowPrompt(false)
       }
     }
-
-    // Only add the click listener if the audio is loaded
     if (isAudioLoaded) {
       window.addEventListener("click", handleClick)
     }
